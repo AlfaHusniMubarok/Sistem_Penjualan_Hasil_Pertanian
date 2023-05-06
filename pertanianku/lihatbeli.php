@@ -1,0 +1,66 @@
+<?php
+include_once("config.php");
+$sql = mysqli_query($mysqli, "SELECT * FROM konsumen");
+?>
+<html>
+<head>    
+    <title>Konsumen</title>
+    <link rel="shortcut icon" href="icon.png">
+    <link rel="stylesheet" href="desain.css" />
+    <style>
+        h2 {
+		  font-size: 48px;
+          font-family: sans-serif;
+		  margin: auto;
+		  mix-blend-mode: difference;
+		  padding: 0 50px;
+		  text-transform: uppercase;
+		}
+        #konsumen{
+            text-decoration:none;
+            color: #301b7a;
+        }
+    </style>
+</head>
+
+<body>
+<header> 
+    <h1>Sistem Penjualan Hasil Pertanian</h1>
+    <p class="deskripsi">Sistem dimana anda dapat menjual ataupun membeli hasil panen pertanian.</p>
+ </header>
+ <!-- akhir bagian header template -->
+
+ <div class="wrap">
+ <!-- bagian menu -->
+ <nav class="menu">
+ </nav>
+ <!-- akhir bagian menu -->
+
+ <div class="blog">
+ <h2><a href="beli.php" id="konsumen">Konsumen</a></h2> 
+    <div class="conteudo">
+    <center>
+    <div class="post-info">
+        <b>Data Konsumen</b>
+    </div>
+    <table class="table1">
+
+<tr>
+    <th>No.</th> <th>Nama Konsumen</th> <th>Hasil Pertanian</th> <th>Berat</th>
+</tr>
+<?php
+$no=0;
+    while($user_data = mysqli_fetch_array($sql)) {         
+    $no++;
+    echo "<tr>";
+    echo "<td>".$no.".</td>";
+    echo "<td>".$user_data['nama_konsumen']."</td>";   
+    echo "<td>".$user_data['nama_barang']."</td>";
+    echo "<td>".$user_data['berat']." Kg</td>";
+}
+?>
+</table>
+</center>
+</div>
+</body>
+</html>

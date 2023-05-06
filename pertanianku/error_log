@@ -1,0 +1,4 @@
+[09-Mar-2021 06:10:01 UTC] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/alfamagang/public_html/config.php on line 8
+[09-Mar-2021 07:35:09 UTC] PHP Warning:  mysqli_query(): Empty query in /home/alfamagang/public_html/beli.php on line 27
+[09-Mar-2021 07:36:44 UTC] PHP Warning:  mysqli_query(): Empty query in /home/alfamagang/public_html/beli.php on line 27
+[12-Mar-2021 03:57:21 UTC] PHP Warning:  mysqli_query(): Empty query in /home/alfamagang/public_html/beli.php on line 10
